@@ -14,16 +14,22 @@ class Pokedex extends Component {
   }
     
   handleClick = () => {    
-    if (this.state.count !== pokemons.length - 1) {
-      this.setState({
-        count: this.state.count + 1
-      })
-    } else {
-      this.setState({
-        count: 0
-      });
-    }
+    this.setState({
+      count: (this.state.count + 1) % pokemons.length //percorre o array infinitamente
+    });
   }
+  // PESQUISADO NA INTERNET
+  // handleClick = () => {    
+  //   if (this.state.count !== pokemons.length - 1) {
+  //     this.setState({
+  //       count: this.state.count + 1
+  //     })
+  //   } else {
+  //     this.setState({
+  //       count: 0
+  //     });
+  //   }
+  // }
 
   render() {
     const { pokemons } = this.props;
