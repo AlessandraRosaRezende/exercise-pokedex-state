@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <div className="pokemon">
         <h1>Pokedex</h1>
-        <Pokedex pokemons={pokemons} />      
+        <Pokedex pokemons={pokemons} />    
       </div>
     </div>
   );
